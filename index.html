@@ -94,6 +94,29 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+    .logo {
+  width: 180px;
+  max-width: 70%;
+  margin-bottom: 20px;
+  z-index: 2;
+    }
+    .instagram-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 26px;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+.instagram-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
   </style>
 </head>
 <body>
@@ -105,11 +128,17 @@
 
   <!-- Açılış -->
   <header>
+    <img src="logo.png" alt="Lezzet-i Ala Logo" class="logo">
     <h1>Hoş Geldiniz</h1>
     <p>Lezzet‑i Ala Köfte & Kokoreç</p>
     <a class="btn" href="https://wa.me/905337750685" target="_blank">📲 WhatsApp Sipariş</a>
     <a class="btn" href="https://www.google.com/maps" target="_blank">📍 Yol Tarifi</a>
     <a class="btn" href="https://www.google.com/search?q=lezzet+i+ala+köfte" target="_blank">⭐ Google Yorumları</a>
+    <a href="https://www.instagram.com/lezzetiala.kokorec/" 
+   class="instagram-btn" 
+   target="_blank">
+   📸 Instagram’dan Bizi Takip Edin
+</a>
   </header>
 
   <!-- Harita -->
