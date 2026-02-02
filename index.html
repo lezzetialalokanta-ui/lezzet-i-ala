@@ -1,148 +1,137 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lezzet-i Ala</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lezzet-i Ala Köfte & Kokoreç</title>
 
-<!-- Google Fontlar -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-} 
-  
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
 
-/* LOGO */
-.logo {
-  margin-top: 60px;
-}
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1550547660-d9450f859349');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
 
-.logo img {
-  width: 160px;
-}
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
 
-/* MENU BUTONU */
-.menu-btn {
-  background: linear-gradient(45deg, #ff9800, #ff5722);
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 40px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 25px auto;
-  display: block;
-  transition: all 0.4s ease;
-}
+    header p {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.3rem;
+      color: #f5c16c;
+    }
 
-/* Scroll sonrası sağ alt */
-.menu-btn.floating {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  margin: 0;
-  z-index: 999;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-/* BAŞLIK */
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  margin-top: 20px;
-}
+    .btn {
+      display: inline-block;
+      padding: 15px 28px;
+      background: #e63946;
+      color: #fff;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-.subtitle {
-  font-family: 'Pacifico', cursive;
-  font-size: 22px;
-  color: #ffd27d;
-  margin-bottom: 40px;
-}
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
 
-/* ALT BUTONLAR */
-.actions button {
-  width: 260px;
-  padding: 14px;
-  margin: 10px auto;
-  border: none;
-  border-radius: 35px;
-  font-size: 15px;
-  cursor: pointer;
-  display: block;
-}
+    /* Floating Menu Button */
+    #menuBtn {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      transition: all 0.5s ease;
+    }
 
-.whatsapp { background: #25D366; color: white; }
-.maps { background: #ff7043; color: white; }
-.google { background: #fbc02d; color: black; }
-.instagram { 
-  background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
-  color: white;
-}
-</style>
+    #menuBtn.fixed {
+      position: fixed;
+      top: auto;
+      bottom: 20px;
+      left: auto;
+      right: 20px;
+      transform: none;
+    }
+
+    footer {
+      padding: 30px;
+      background: #000;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- LOGO -->
-<div class="logo">
-  <img src="logo.png" alt="Lezzet-i Ala">
-</div>
+  <!-- Menü Butonu -->
+  <div id="menuBtn">
+    <a class="btn" href="https://menu.myqrcodemenu.com/menu/lezzet-i-ala-73750f" target="_blank">🍽️ Menüyü Görüntüle</a>
+  </div>
 
-<!-- MENU BUTONU -->
-<button id="menuBtn" class="menu-btn"
-onclick="window.open('https://menu.myqrcodemenu.com/menu/lezzet-i-ala-73750f','_blank')">
-🍽️ Menüyü Görüntüle
-</button>
+  <!-- Açılış -->
+  <header>
+    <h1>Hoş Geldiniz</h1>
+    <p>Lezzet‑i Ala Köfte & Kokoreç</p>
+    <a class="btn" href="https://wa.me/905337750685" target="_blank">📲 WhatsApp Sipariş</a>
+    <a class="btn" href="https://www.google.com/maps" target="_blank">📍 Yol Tarifi</a>
+    <a class="btn" href="https://www.google.com/search?q=lezzet+i+ala+köfte" target="_blank">⭐ Google Yorumları</a>
+  </header>
 
-<!-- BAŞLIK -->
-<h1>Hoş Geldiniz</h1>
-<div class="subtitle">Lezzet-i Ala Köfte & Kokoreç</div>
+  <!-- Harita -->
+  <section>
+    <h2>📍 Bizi Bulun</h2>
+    <iframe src="https://www.google.com/maps?q=Beşikkaya,+Karapürçek+Cd.+95/D,+Altındağ/Ankara&output=embed" width="100%" height="300" style="border:0;border-radius:20px" loading="lazy"></iframe>
+  </section>
 
-<!-- DİĞER BUTONLAR -->
-<div class="actions">
-  <button class="whatsapp"
-  onclick="window.open('https://wa.me/905337750685','_blank')">
-  📱 WhatsApp Sipariş
-  </button>
+  <footer>
+    © 2026 Lezzet‑i Ala • Tüm Hakları Saklıdır
+  </footer>
 
-  <button class="maps"
-  onclick="window.open('https://www.google.com/maps','_blank')">
-  📍 Yol Tarifi
-  </button>
-
-  <button class="google"
-  onclick="window.open('https://www.google.com/search?q=lezzet+i+ala','_blank')">
-  ⭐ Google Yorumları
-  </button>
-
-  <button class="instagram"
-  onclick="window.open('https://www.instagram.com/lezzetiala.kokorec/','_blank')">
-  📸 Instagram’dan Takip Et
-  </button>
-</div>
-
-<script>
-const menuBtn = document.getElementById("menuBtn");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 150) {
-    menuBtn.classList.add("floating");
-  } else {
-    menuBtn.classList.remove("floating");
-  }
-});
-</script>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight / 2) {
+        menuBtn.classList.add('fixed');
+      } else {
+        menuBtn.classList.remove('fixed');
+      }
+    });
+  </script>
 
 </body>
 </html>
